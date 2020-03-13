@@ -9,17 +9,17 @@ import java.math.BigDecimal;
 @Entity
 @Getter
 @Setter
-public class Livro {
+public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String titulo;
+    private String title;
 
     @Column
-    private BigDecimal preco;
+    private BigDecimal price;
 
     @Column
     private String isbn;
