@@ -7,17 +7,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.constraints.NotNull;
-
 @RestController
 @RequestMapping("/api/products")
 @RequiredArgsConstructor
 public class ProductController {
 
-    private ProductService productService;
+    private final  ProductService productService;
 
     @GetMapping(value = { "", "/"})
-    public @NotNull Iterable<Book> getAllBooks(){
+    public Iterable<Book> getAllBooks(){
         return productService.getAllBooks();
     }
 }
